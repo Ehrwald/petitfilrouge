@@ -4,17 +4,14 @@ language: java
 jdk:
   - oraclejdk11
 
-jobs:
-  include:
-    - stage: préinstall
-      addons:
+
+  addons:
        sonarcloud:
         organization: "ehrwald"
         token:
           secure: "$SONAR_TOKEN"
-    script:
+  script:
     - mvn jetty:run
-    - stage: start test
-    script:
+    - sleep 30s
     - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=
     - mvn test -B
