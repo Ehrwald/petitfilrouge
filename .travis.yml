@@ -1,5 +1,6 @@
 language: java
 
+install: jetty:run
 addons:
   sonarcloud:
     organization: "ehrwald"
