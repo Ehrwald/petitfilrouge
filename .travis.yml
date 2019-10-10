@@ -10,6 +10,5 @@ jdk:
   - oraclejdk11
 
 script:
-  - mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - mvn jetty:run
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=Ehrwald_petitfilrouge
