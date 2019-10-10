@@ -11,6 +11,4 @@ addons:
           secure: "$SONAR_TOKEN"
 script:
   - mvn jetty:run &
-  - sleep 30s
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=
   - mvn test -B
