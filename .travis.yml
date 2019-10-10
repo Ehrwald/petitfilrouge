@@ -11,4 +11,5 @@ jdk:
 
 script:
   - mvn jetty:run
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=Ehrwald_petitfilrouge
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=
+  - mvn test -B
