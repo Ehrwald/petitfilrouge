@@ -1,15 +1,20 @@
+dist: bionic
+
 language: java
-
-
-addons:
-  sonarcloud:
-    organization: "ehrwald"
-    token:
-      secure: "$SONAR_TOKEN"
 jdk:
   - oraclejdk11
 
-script:
-  - mvn jetty:run
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=
-  - mvn test -B
+jobs:
+  include:
+    - stage: préinstall
+      addons:
+       sonarcloud:
+        organization: "ehrwald"
+        token:
+          secure: "$SONAR_TOKEN"
+    script:
+    - mvn jetty:run
+    - stage: start test
+    script:
+    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=
+    - mvn test -B
