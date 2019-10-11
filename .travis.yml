@@ -15,3 +15,5 @@ script:
   - sleep 30s
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=
   - mvn test -B
+ports:
+  - 8080:8080/tcp
