@@ -6,7 +6,7 @@ jdk:
 
 addons:
       sonarcloud:
-        organization: "ehrwald"
+        organization: "Ehrwald"
         token:
           secure: "$SONAR_TOKEN"
 script:
