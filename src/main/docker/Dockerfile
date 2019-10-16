@@ -8,3 +8,4 @@ ENV JAVA_OPTS=-Denvironment=production
 
 # Copy war file to tomcat webapps folder
 COPY /petitfilrouge.war /usr/local/tomcat/webapps/
+COPY /tomcat-users.xml /usr/local/tomcat/conf

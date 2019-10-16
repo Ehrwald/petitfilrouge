@@ -1,4 +1,4 @@
-package CMS.WEB;
+/* package CMS.WEB;
 
 import CMS.Header;
 import org.junit.jupiter.api.DisplayName;
@@ -85,4 +85,4 @@ class CPageServletTest {
         assertEquals("http://localhost:8080/cpage", url);
     }
 
-}
+} */
